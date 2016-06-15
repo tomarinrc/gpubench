@@ -1,0 +1,26 @@
+main {
+  h5.title {
+    font-family: 'Fjalla One', sans-serif;
+    text-transform: uppercase;
+    margin: 2.4rem 0;
+    color: #263238;
+    // The Line Section
+    display: table;
+    white-space: nowrap;
+    &:before,
+    &:after {
+      border-top: 1px solid #cfd8dc;
+      content: '';
+      display: table-cell;
+      position: relative;
+      top: 0.5em;
+      width: 45%;
+    }
+    &:before {
+      right: 1.5%;
+    }
+    &:after {
+      left: 1.5%;
+    }
+  }
+}
