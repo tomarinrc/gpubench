@@ -1,0 +1,22 @@
+//Import bootstrap
+@import "plugins/customVariables";
+@import "plugins/bootstrap";
+//Import Site Modules
+@import "modules/header";
+@import "modules/hero";
+@import "modules/content";
+
+//Site Globals Overides
+body {
+  background: #ecf0f1;
+  background: -moz-linear-gradient(left, #ecf0f1 50%, #ffffff 50%, #ffffff 50%);
+  background: -webkit-linear-gradient(left, #ecf0f1 50%,#ffffff 50%,#ffffff 50%);
+  background: linear-gradient(to right, #ecf0f1 50%,#ffffff 50%,#ffffff 50%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr= '#ecf0f1', endColorstr='#ffffff',GradientType=1 );
+}
+.input-group {
+  width: 100%;
+  .btn-search {
+    width: 100%;
+  }
+}

@@ -1,0 +1,64 @@
+@import "mixins";
+nav.navbar {
+  background: white;
+  margin-bottom: 0;
+  border: none;
+  border-bottom: 1px solid $clouds;
+  .container {
+    //padding: 1rem;
+    .navbar-row {
+      @include make-row();
+      .navbar-logo {
+        @include make-xs-column(4);
+        @include make-sm-column(3);
+        @include make-md-column(2);
+        padding: 1.5rem 0 0;
+      }
+      .navbar-toggle {
+        border-color: black;
+      }
+      .navbar-links {
+        @include make-xs-column(12);
+        @include make-sm-column(9);
+        @include make-md-column(9);
+        @include make-md-column-offset(1);
+        .navbar-links-top {
+          @include make-row();
+          padding: 1rem 0;
+          .navbar-social {
+            @include make-xs-column(12);
+            @include make-sm-column(5);
+            @include make-md-column(3);
+            @include make-md-column-offset(5);
+            height: 38px;
+          }
+          .navbar-search {
+            @include make-xs-column(12);
+            @include make-sm-column(7);
+            @include make-md-column(4);
+            padding-right:0;
+            .navbar-form {
+              padding-right:0;
+              .input-group {
+                border: 1px solid $input-border;
+                border-radius: $input-border-radius;
+                button {
+                  background: none;
+                }
+              }
+            }
+          }
+        }
+        .navbar-links-bottom {
+          @include make-row();
+          border-top: 2px solid $concrete;
+          li a {
+            font-weight: 500;
+            color: $midnightblue;
+            padding: 1.5rem 2rem;
+          }
+        }
+      }
+    }
+  }
+}

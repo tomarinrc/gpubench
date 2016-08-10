@@ -1,52 +1,242 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+
+<html lang="en">
 
 <head>
-  <!--Import Google Icon Font-->
-  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet" type="text/css">
-  <!--Import materialize.css-->
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
   <link rel="stylesheet" href="style.css">
-  <!--Let browser know website is optimized for mobile-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic" rel="stylesheet" type="text/css">
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
 </head>
 
 <body>
-
-  <header>
-    <nav>
-      <div class="nav-wrapper">
-        <a href="#!" class="brand-logo">Logo</a>
-        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="sass.html">Sass</a></li>
-          <li><a href="badges.html">Components</a></li>
-          <li><a href="collapsible.html">Javascript</a></li>
-          <li><a href="mobile.html">Mobile</a></li>
-        </ul>
-        <ul class="side-nav" id="mobile-demo">
-          <li><a href="sass.html">Sass</a></li>
-          <li><a href="badges.html">Components</a></li>
-          <li><a href="collapsible.html">Javascript</a></li>
-          <li><a href="mobile.html">Mobile</a></li>
-        </ul>
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-row">
+        <!--Logo-->
+        <div class="navbar-logo">
+          <img src="assets/images/logo.png" class="img-responsive" />
+        </div>
+        <!--Navigation Links-->
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="navbar-links collapse navbar-collapse" id="navbar-collapse">
+          <!--Top Row of Navbar-->
+          <div class="navbar-links-top">
+            <div class="navbar-social">
+              <div class="navbar-text text-right">
+                Share:
+                <div class="addthis_sharing_toolbox"></div>
+                <a href="#"></a>
+              </div>
+            </div>
+            <div class="navbar-search">
+              <form class="navbar-form">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Search Products" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-search" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                  </span>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!--End of Top Row-->
+          <!--Bottom Row of Navbar-->
+          <div class="navbar-links-bottom">
+            <div class="col-md-12">
+              <ul class="nav navbar-nav pull-right">
+                <li><a href="#">Home</a></li>
+                <li class="divider-vertical"></li>
+                <li><a href="#">Products</a></li>
+                <li class="divider-vertical"></li>
+                <li><a href="#">About Us</a></li>
+                <li class="divider-vertical"></li>
+                <li><a href="#">Contact Us</a></li>
+                <li class="divider-vertical"></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+          <!--End of Bottom Row-->
+        </div>
+        <!--End of Navigation Links-->
       </div>
-    </nav>
-  </header>
+    </div>
+  </nav>
+  <!--
+  ------------------------------------------
+  ----Hero Slider----------------------------
+  ----https://codyhouse.co/gem/hero-slider/--
+  ------------------------------------------
+  -->
+  <section class="cd-hero">
+    <ul class="cd-hero-slider autoplay">
+      <li class="selected">
+        <div class="cd-full-width">
+          <h2>Hero slider</h2>
+          <p>A simple, responsive slideshow in CSS &amp; jQuery.</p>
+          <a href="http://codyhouse.co/?p=675" class="cd-btn">Article &amp; Download</a>
+        </div>
+        <!-- .cd-full-width -->
+      </li>
 
+      <li>
+        <div class="cd-half-width">
+          <h2>Slide title here</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In consequatur cumque natus!</p>
+          <a href="#0" class="cd-btn">Start</a>
+          <a href="#0" class="cd-btn secondary">Learn More</a>
+        </div>
+        <!-- .cd-half-width -->
+
+        <div class="cd-half-width cd-img-container">
+          <img src="assets/tech-1.jpg" alt="tech 1">
+        </div>
+        <!-- .cd-half-width.cd-img-container -->
+      </li>
+
+      <li>
+        <div class="cd-half-width cd-img-container">
+          <img src="assets/tech-2.jpg" alt="tech 2">
+        </div>
+        <!-- .cd-half-width.cd-img-container -->
+
+        <div class="cd-half-width">
+          <h2>Slide title here</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In consequatur cumque natus!</p>
+          <a href="#0" class="cd-btn">Start</a>
+          <a href="#0" class="cd-btn secondary">Learn More</a>
+        </div>
+        <!-- .cd-half-width -->
+
+      </li>
+    </ul>
+    <!-- .cd-hero-slider -->
+
+    <div class="cd-slider-nav">
+      <div class="container">
+        <div class="cd-slider-row">
+          <div class="cd-push-nav">
+            &nbsp;
+          </div>
+          <nav>
+            <span class="cd-marker item-1"></span>
+
+            <ul>
+              <li class="selected"><a href="#0">Intro</a></li>
+              <li><a href="#0">Tech 1</a></li>
+              <li><a href="#0">Tech 2</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <!-- .cd-slider-nav -->
+  </section>
+  <!-- .cd-hero -->
+  <!--
+  ------------------------------------------
+  ----End of Hero Slider----------------------
+  ------------------------------------------
+  -->
   <main>
-
+    <div class="container">
+      <div class="main-row">
+        <aside class="sidebar">
+          <div class="sidebar-search">
+            <form class="sidebar-form">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search Products" />
+                <span class="input-group-btn">
+                  <button class="btn btn-search" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                </span>
+              </div>
+            </form>
+          </div>
+          <ul class="sidebar-categories">
+            <li>Thyroid Health</li>
+            <li>Heart Health</li>
+            <li>Mens Health</li>
+            <li>Womans Health</li>
+            <li>Blood Pressure</li>
+            <li>Weight Management</li>
+            <li>Vitamins &amp; Supplements</li>
+          </ul>
+          <ul class="sidebar-azlinks">
+            <span class="sidebar-azlinks-title">By Name</span>
+            <li class="sidebar-azlinks-link">A-C</li>
+            <ul class="sidebar-azsubmenu">
+              <li class="sidebar-azsubmenu-link">Apple Cider Vinegar with Green Tea</li>
+              <li class="sidebar-azsubmenu-link">Advanced Engergize Advantage</li>
+              <li class="sidebar-azsubmenu-link">Another Product</li>
+              <li class="sidebar-azsubmenu-link">Aaron Advanced Aeroputhtic Pills</li>
+            </ul>
+            <li class="sidebar-azlinks-link">D-F</li>
+            <ul class="sidebar-azsubmenu">
+              <li class="sidebar-azsubmenu-link">Apple Cider Vinegar with Green Tea</li>
+              <li class="sidebar-azsubmenu-link">Advanced Engergize Advantage</li>
+              <li class="sidebar-azsubmenu-link">Another Product</li>
+              <li class="sidebar-azsubmenu-link">Aaron Advanced Aeroputhtic Pills</li>
+            </ul>
+            <li class="sidebar-azlinks-link">G-I</li>
+            <ul class="sidebar-azsubmenu">
+              <li class="sidebar-azsubmenu-link">Apple Cider Vinegar with Green Tea</li>
+              <li class="sidebar-azsubmenu-link">Advanced Engergize Advantage</li>
+              <li class="sidebar-azsubmenu-link">Another Product</li>
+              <li class="sidebar-azsubmenu-link">Aaron Advanced Aeroputhtic Pills</li>
+            </ul>
+            <li class="sidebar-azlinks-link">J-L</li>
+            <ul class="sidebar-azsubmenu">
+              <li class="sidebar-azsubmenu-link">Apple Cider Vinegar with Green Tea</li>
+              <li class="sidebar-azsubmenu-link">Advanced Engergize Advantage</li>
+              <li class="sidebar-azsubmenu-link">Another Product</li>
+              <li class="sidebar-azsubmenu-link">Aaron Advanced Aeroputhtic Pills</li>
+            </ul>
+            <li class="sidebar-azlinks-link">M-O</li>
+            <li class="sidebar-azlinks-link">P-R</li>
+            <li class="sidebar-azlinks-link">S-U</li>
+            <li class="sidebar-azlinks-link">V-Z</li>
+          </ul>
+        </aside>
+        <section class="content">
+          <h1>Providing Vibrant Health and Wellness for the Entire Family</h1>
+          <p>
+            It is a lot of fun. Now we don't want him to get lonely, so we'll give him a little friend. We're not trying to teach you a thing to copy. We're just here to teach you a technique, then let you loose into the world. God gave you this gift of imagination.
+            Use it. A fan brush is a fantastic piece of equipment. Use it. Make friends with it.
+          </p>
+          <img class="post-image" src="http://placehold.it/350x150">
+          <p>
+            It is a lot of fun. Now we don't want him to get lonely, so we'll give him a little friend. We're not trying to teach you a thing to copy. We're just here to teach you a technique, then let you loose into the world. God gave you this gift of imagination.
+            Use it. A fan brush is a fantastic piece of equipment. Use it. Make friends with it.
+          </p>
+          <img class="post-image" src="http://placehold.it/350x150">
+          <h2>Gauranteed Quality You Can Trust</h2>
+          <p>
+            Isn't it great to do something you can't fail at? The very fact that you're aware of suffering is enough reason to be overjoyed that you're alive and can experience it. These trees are so much fun. I get started on them and I have a hard time stopping.
+            I'll go over the colors one more time that we use: Titanium white, Thalo green, Prussian blue, Van Dyke brown, Alizarin crimson, Sap green, Cad yellow, and Permanent red.
+          </p>
+        </section>
+      </div>
+    </div>
   </main>
-
-  <footer>
-
-  </footer>
-
-  <!--Import jQuery before materialize.js-->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script type="text/javascript" src="js/materialize.min.js"></script>
-  <script src="js/Chart.js"></script>
-  <script src="js/script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="assets/javascripts/bootstrap.js"></script>
+  <script src="assets/javascripts/scripts.js"></script>
+  <script src="assets/javascripts/hero.js"></script>
+  <!-- Go to www.addthis.com/dashboard to customize your tools -->
+  <!--<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-579a596efca72558"></script>-->
 </body>
 
 </html>
