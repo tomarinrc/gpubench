@@ -1,6 +1,10 @@
-@mixin vcenter() {
-  display: flex;
+// Breakpoint Mixins
+@mixin breakpoint ($bp) {
+  @media (max-width: $bp) {
+    @content;
+  }
 }
+
 // Flat Colors From FLATCOLOR UI
 $turquoise: rgba(26,188,156,1);
 $emerald: rgba(46,204,113,1);

@@ -1,6 +1,6 @@
 @import "mixins";
 nav.navbar {
-	padding: 0 2rem;
+	padding: 0;
 	&.navbar-default {
 		background: $clouds;
 		will-change: transform;
@@ -21,15 +21,17 @@ nav.navbar {
 				padding: 2rem;
 				img {
 					height: 3rem;
-					//width: auto;
-					//margin: auto;
-					//display: block;
+					@include breakpoint($screen-xs-min) {
+						width: auto;
+						margin: auto;
+						display: block;
+					}
 				}
 			}
 			.navbar-search {
 				@include make-xs-column(12);
 				@include make-sm-column(8);
-				padding: .8rem 0;
+				padding: .8rem 2rem;
 				.searchbox {
 					position: relative;
 					min-width: 5.2rem;
@@ -99,6 +101,9 @@ nav.navbar {
 		background: $clouds;
 		border: 1px solid $bordercolor;
 		border-width: 0 0 1px;
+		@include breakpoint($screen-xs-min) {
+			display: none;
+		}
 		.navbar-links {
 			@include make-row();
 			.navbar-logo-mini {
@@ -141,114 +146,74 @@ nav.navbar {
 	}
 }
 
-
-/*nav.site-navbar.navbar {
-	background: $clouds;
-	.navbar-row {
-		@include make-row();
-		padding: 0 2rem;
-		&.navbar-row-main {
-			.navbar-logo {
-				@include make-xs-column(0);
-				@include make-sm-column(2);
-				padding: 4rem 0;
+.gpu-hero {
+	@include make-row();
+	@include breakpoint($screen-xs-min) {
+		margin: 14rem 0 0;
+	}
+	overflow: hidden;
+	margin: 7rem 0 0;
+	height: 60vh;
+	.gpu-quickinfo {
+		@include make-sm-column(6);
+		height: 100%;
+		position: relative;
+		z-index: 100;
+		background: rgba(255, 255, 255, 0.9);
+		.gpu-quickinfo-container {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			h1 {
+				font-size: 4.8rem;
+				color: $wetasphalt;
+				font-weight: bold;
+			}
+			p {
+				font-size: 1.8rem;
+				font-weight: bold;
 			}
 		}
 	}
-}
-*/
-
-
-/* SEARCH STYLING
-.navbar-search {
-	@include make-xs-column(12);
-	@include make-sm-column(10);
-	padding: 0;
-	.searchbox {
+	.gpu-image {
+		@include make-sm-column(6);
+		height: 100%;
 		position: relative;
-		min-width: 5.2rem;
-		width: 0%;
-		height: 5.2rem;
-		float: right;
-		overflow: hidden;
-		-webkit-transition: width 0.3s;
-		-moz-transition: width 0.3s;
-		-ms-transition: width 0.3s;
-		-o-transition: width 0.3s;
-		transition: width 0.3s;
-		border-radius: 2.6rem;
-		border: 1px solid $silver;
-	}
-	.searchbox-input {
-		top: 0;
-		right: 0;
-		border: 0;
-		outline: 0;
-		background: white;
-		width: 100%;
-		height: 5.2rem;
-		margin: 0;
-		padding: 0px 55px 0px 20px;
-		color: $asbestos;
-		border-radius: 2.6rem
-	}
-	.searchbox-input::-webkit-input-placeholder {
-		color: $concrete;
-	}
-	.searchbox-input:-moz-placeholder {
-		color: $concrete;
-	}
-	.searchbox-input::-moz-placeholder {
-		color: $concrete;
-	}
-	.searchbox-input:-ms-input-placeholder {
-		color: $concrete;
-	}
-	.searchbox-icon, .searchbox-submit {
-		width: 5.2rem;
-		height: 5.2rem;
-		display: block;
-		position: absolute;
-		top: 0;
-		right: 0;
-		padding: 0;
-		margin: 0;
-		border: 0;
-		outline: 0;
-		text-align: center;
-		cursor: pointer;
-		color: $midnightblue;
-		background: white;
-		font-size: 2rem;
-		line-height: 5.2rem;
-		border-radius: 2.6rem
-	}
-	.searchbox-open {
-		width: 100%;
-	}
-}
-*/
-
-
-/* NAVBAR STYLIN
-.navbar-page-links {
-	display: inline-block;
-	a.navbar-logo-mini {
-		padding: 3rem 4rem;
-		display: none;
+		.gpu-image-overlay {
+			width: 100%;
+			height: 100%;
+			margin: 0 0 0 -15px;
+			position: relative;
+			z-index: 100;
+			background: -moz-linear-gradient(left, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, .6) 100%);
+			background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, .6) 100%);
+			background: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, .6) 100%);
+		}
 		img {
-			height: 2em;
-		}
-	}
-	a {
-		padding: 4rem;
-		display: inline-block;
-		font-size: 1em;
-		color: $midnightblue;
-		&.selected {
-			border-bottom: 4px solid $peterriver;
-			font-weight: bold;
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: translateY(-50%);
+			width: 200%;
 		}
 	}
 }
- */
+
+.gpu-section-title {
+	width: 100%;
+	background: $belizehole;
+	position: relative;
+	z-index: 100;
+	color: white;
+	h2 {
+		font-family: 'Fjalla One', sans-serif;
+		font-size: 3.2rem;
+	}
+}
+
+.gpu-section {
+	@include make-row();
+	.gpu-chart-1 {
+		@include make-sm-column(6);
+	}
+}
