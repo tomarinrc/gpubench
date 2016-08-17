@@ -5981,6 +5981,7 @@ nav.navbar {
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
+    padding: 0;
     height: 100%;
     position: relative;
     z-index: 100;
@@ -6035,7 +6036,8 @@ nav.navbar {
   color: white; }
   .gpu-section-title h2 {
     font-family: 'Fjalla One', sans-serif;
-    font-size: 3.2rem; }
+    font-size: 3.2rem;
+    text-transform: uppercase; }
 
 .gpu-section {
   margin-left: -15px;
@@ -6045,15 +6047,34 @@ nav.navbar {
     display: table; }
   .gpu-section:after {
     clear: both; }
-  .gpu-section .gpu-chart-1 {
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px; }
-    @media (min-width: 768px) {
-      .gpu-section .gpu-chart-1 {
-        float: left;
-        width: 50%; } }
+
+.chart {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 2rem 0; }
+  @media (min-width: 768px) {
+    .chart {
+      float: left;
+      width: 50%; } }
+  .chart .chart-title {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 2.2rem; }
+  .chart .chart-bar {
+    width: 100%;
+    height: 5rem;
+    margin: 0 0 1rem;
+    background: #ecf0f1;
+    position: relative; }
+    .chart .chart-bar .chart-bar-fill {
+      position: absolute;
+      width: 80%;
+      height: 5rem;
+      background: #95a5a6;
+      z-index: 2; }
+      .chart .chart-bar .chart-bar-fill:hover {
+        background: #3498db; }
 
 .input-group {
   width: 100%; }

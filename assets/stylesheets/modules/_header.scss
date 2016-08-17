@@ -156,6 +156,7 @@ nav.navbar {
 	height: 60vh;
 	.gpu-quickinfo {
 		@include make-sm-column(6);
+		padding: 0;
 		height: 100%;
 		position: relative;
 		z-index: 100;
@@ -208,12 +209,36 @@ nav.navbar {
 	h2 {
 		font-family: 'Fjalla One', sans-serif;
 		font-size: 3.2rem;
+		text-transform: uppercase;
 	}
 }
 
 .gpu-section {
 	@include make-row();
-	.gpu-chart-1 {
-		@include make-sm-column(6);
+}
+
+.chart {
+	@include make-sm-column(6);
+	margin: 2rem 0;
+	.chart-title {
+		font-family: 'Fjalla One', sans-serif;
+		font-size: 2.2rem;
+	}
+	.chart-bar {
+		width: 100%;
+		height: 5rem;
+		margin: 0 0 1rem;
+		background: $clouds;
+		position: relative;
+		.chart-bar-fill {
+			position: absolute;
+			width: 80%;
+			height: 5rem;
+			background: $concrete;
+			z-index: 2;
+			&:hover {
+				background: $peterriver;
+			}
+		}
 	}
 }
