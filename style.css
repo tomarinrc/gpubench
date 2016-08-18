@@ -5919,11 +5919,7 @@ nav.navbar {
           width: 100%; }
   nav.navbar.navbar-secondary {
     background: #ecf0f1;
-    border: 1px solid #e7e7e7;
-    border-width: 0 0 1px; }
-    @media (max-width: 480px) {
-      nav.navbar.navbar-secondary {
-        display: none; } }
+    border: none; }
     nav.navbar.navbar-secondary .navbar-links {
       margin-left: -15px;
       margin-right: -15px; }
@@ -5946,8 +5942,14 @@ nav.navbar {
         color: white;
         background: #2c3e50;
         padding: 2rem 4rem; }
+        @media (max-width: 480px) {
+          nav.navbar.navbar-secondary .navbar-links .navbar-gpu-title {
+            padding: 2rem; } }
       nav.navbar.navbar-secondary .navbar-links .navbar-link-section {
         float: left; }
+        @media (max-width: 480px) {
+          nav.navbar.navbar-secondary .navbar-links .navbar-link-section {
+            display: none; } }
         nav.navbar.navbar-secondary .navbar-links .navbar-link-section a {
           display: block;
           float: left;
@@ -5973,8 +5975,7 @@ nav.navbar {
   position: relative;
   overflow: hidden;
   margin: 7rem 0 0;
-  height: 60vh;
-  min-height: 60vh; }
+  height: 60vh; }
   .gpu-hero:before, .gpu-hero:after {
     content: " ";
     display: table; }
@@ -5982,7 +5983,8 @@ nav.navbar {
     clear: both; }
   @media (max-width: 480px) {
     .gpu-hero {
-      margin: 14rem 0 0; } }
+      margin: 14rem 0 0;
+      height: 80vh; } }
   .gpu-hero .gpu-quickinfo {
     position: relative;
     float: left;
@@ -5999,13 +6001,35 @@ nav.navbar {
       position: absolute;
       top: 50%;
       transform: translateY(-50%); }
-      .gpu-hero .gpu-quickinfo .gpu-quickinfo-container h1 {
+      .gpu-hero .gpu-quickinfo .gpu-quickinfo-container h1.gpu-name {
         font-size: 4.8rem;
         color: #34495e;
         font-weight: bold; }
-      .gpu-hero .gpu-quickinfo .gpu-quickinfo-container p {
+        .gpu-hero .gpu-quickinfo .gpu-quickinfo-container h1.gpu-name .gpu-brand {
+          font-weight: normal;
+          letter-spacing: -2px; }
+      .gpu-hero .gpu-quickinfo .gpu-quickinfo-container .gpu-quickinfo-specs {
         font-size: 1.8rem;
-        font-weight: bold; }
+        font-weight: bold;
+        margin: 0 0 .4rem; }
+      .gpu-hero .gpu-quickinfo .gpu-quickinfo-container .gpu-quickinfo-date {
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #7f8c8d; }
+      .gpu-hero .gpu-quickinfo .gpu-quickinfo-container .gpu-quickinfo-button {
+        font-size: 1.8rem;
+        border-radius: 4px;
+        padding: 1rem 4rem;
+        display: inline-block;
+        margin: 2rem 2rem 0 0;
+        text-decoration: none; }
+        .gpu-hero .gpu-quickinfo .gpu-quickinfo-container .gpu-quickinfo-button.specs {
+          color: #2980b9;
+          background: none;
+          border: 1px solid #2980b9; }
+        .gpu-hero .gpu-quickinfo .gpu-quickinfo-container .gpu-quickinfo-button.compare {
+          color: white;
+          background: #2980b9; }
       @media (max-width: 768px) {
         .gpu-hero .gpu-quickinfo .gpu-quickinfo-container {
           padding: 0 1.5rem; } }
@@ -6025,9 +6049,9 @@ nav.navbar {
       height: 100%;
       position: relative;
       z-index: 20;
-      background: -moz-linear-gradient(left, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%);
-      background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%);
-      background: linear-gradient(to right, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%); }
+      background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 100%);
+      background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 100%);
+      background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 100%); }
     .gpu-hero .gpu-image img {
       position: absolute;
       top: -10%;
@@ -6051,12 +6075,19 @@ nav.navbar {
 
 .gpu-section {
   margin-left: -15px;
-  margin-right: -15px; }
+  margin-right: -15px;
+  margin: 2rem -15px 6rem; }
   .gpu-section:before, .gpu-section:after {
     content: " ";
     display: table; }
   .gpu-section:after {
     clear: both; }
+  @media (max-width: 480px) {
+    .gpu-section {
+      margin: 2rem -15px 4rem; } }
+
+.gpu-section-icon {
+  font-size: 0.92em; }
 
 .chart {
   position: relative;
@@ -6068,39 +6099,80 @@ nav.navbar {
     .chart {
       float: left;
       width: 50%; } }
+  @media (max-width: 480px) {
+    .chart {
+      margin: 2rem 0 4rem; } }
   .chart .chart-title {
     font-family: 'Fjalla One', sans-serif;
-    font-size: 2.2rem; }
+    font-size: 2.2rem;
+    margin: 0; }
   .chart .chart-bar {
     width: 100%;
     height: 5rem;
     margin: 0 0 1rem;
-    background: #ecf0f1;
+    background: #bdc3c7;
     position: relative; }
+    .chart .chart-bar .chart-bar-gpu {
+      color: white;
+      font-weight: bold;
+      float: left;
+      margin: 1.25rem 2rem;
+      display: block;
+      position: relative;
+      z-index: 3; }
+    .chart .chart-bar .chart-bar-value {
+      color: white;
+      font-weight: bold;
+      float: right;
+      margin: 1.25rem 2rem;
+      display: block;
+      position: relative;
+      z-index: 3; }
     .chart .chart-bar .chart-bar-fill {
       position: absolute;
-      width: 100%;
+      width: 40%;
       height: 5rem;
       background: #95a5a6;
       z-index: 2; }
       .chart .chart-bar .chart-bar-fill.top-card {
-        background: #f1c40f; }
+        background: #3498db; }
         .chart .chart-bar .chart-bar-fill.top-card:hover {
-          background: #f39c12; }
+          background: #2980b9; }
       .chart .chart-bar .chart-bar-fill:hover {
         background: #3498db; }
-      .chart .chart-bar .chart-bar-fill .chart-bar-gpu {
-        color: white;
-        font-weight: bold;
-        float: left;
-        margin: 1.25rem 2rem;
-        display: block; }
-      .chart .chart-bar .chart-bar-fill .chart-bar-value {
-        color: white;
-        font-weight: bold;
-        float: right;
-        margin: 1.25rem 2rem;
-        display: block; }
+
+.review {
+  margin: 2rem 15px;
+  padding: 2rem 4rem 1.6rem;
+  color: white;
+  border-radius: 2px;
+  background: #7f8c8d;
+  /*&.review-vid {
+  	background: $alizarin;
+  }
+  &.review-site {
+  	background: $asbestos;
+  }*/ }
+  .review .review-title {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 2.2rem;
+    margin: 0; }
+  .review .review-subtitle {
+    margin: 0; }
+
+.specs-list {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px; }
+  @media (min-width: 768px) {
+    .specs-list {
+      float: left;
+      width: 50%; } }
+  .specs-list .specs-list-title {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 2.2rem;
+    margin: 0; }
 
 .input-group {
   width: 100%; }

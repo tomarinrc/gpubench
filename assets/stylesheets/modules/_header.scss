@@ -99,11 +99,9 @@ nav.navbar {
 	}
 	&.navbar-secondary {
 		background: $clouds;
-		border: 1px solid $bordercolor;
-		border-width: 0 0 1px;
-		@include breakpoint($screen-xs-min) {
-			display: none;
-		}
+		//border: 1px solid $bordercolor;
+		//border-width: 0 0 1px;
+		border: none;
 		.navbar-links {
 			@include make-row();
 			.navbar-logo-mini {
@@ -122,8 +120,14 @@ nav.navbar {
 				color: white;
 				background: $midnightblue;
 				padding: 2rem 4rem;
+				@include breakpoint($screen-xs-min) {
+					padding: 2rem;
+				}
 			}
 			.navbar-link-section {
+				@include breakpoint($screen-xs-min) {
+					display: none;
+				}
 				float: left;
 				a {
 					display: block;
