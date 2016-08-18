@@ -5962,12 +5962,19 @@ nav.navbar {
           nav.navbar.navbar-secondary .navbar-links .navbar-link-section a:hover {
             border-bottom: 4px solid #bdc3c7; }
 
+@media (max-width: 768px) {
+  .gpu-hero-container {
+    padding: 0;
+    width: 100% !important; } }
+
 .gpu-hero {
   margin-left: -15px;
   margin-right: -15px;
+  position: relative;
   overflow: hidden;
   margin: 7rem 0 0;
-  height: 60vh; }
+  height: 60vh;
+  min-height: 60vh; }
   .gpu-hero:before, .gpu-hero:after {
     content: " ";
     display: table; }
@@ -5978,6 +5985,8 @@ nav.navbar {
       margin: 14rem 0 0; } }
   .gpu-hero .gpu-quickinfo {
     position: relative;
+    float: left;
+    width: 100%;
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
@@ -5986,10 +5995,6 @@ nav.navbar {
     position: relative;
     z-index: 100;
     background: rgba(255, 255, 255, 0.9); }
-    @media (min-width: 768px) {
-      .gpu-hero .gpu-quickinfo {
-        float: left;
-        width: 50%; } }
     .gpu-hero .gpu-quickinfo .gpu-quickinfo-container {
       position: absolute;
       top: 50%;
@@ -6001,32 +6006,36 @@ nav.navbar {
       .gpu-hero .gpu-quickinfo .gpu-quickinfo-container p {
         font-size: 1.8rem;
         font-weight: bold; }
+      @media (max-width: 768px) {
+        .gpu-hero .gpu-quickinfo .gpu-quickinfo-container {
+          padding: 0 1.5rem; } }
   .gpu-hero .gpu-image {
     position: relative;
+    float: left;
+    width: 100%;
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
     height: 100%;
-    position: relative; }
-    @media (min-width: 768px) {
-      .gpu-hero .gpu-image {
-        float: left;
-        width: 50%; } }
+    position: absolute;
+    top: 0;
+    padding: 0; }
     .gpu-hero .gpu-image .gpu-image-overlay {
       width: 100%;
       height: 100%;
-      margin: 0 0 0 -15px;
       position: relative;
-      z-index: 100;
-      background: -moz-linear-gradient(left, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.6) 100%);
-      background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.6) 100%);
-      background: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.6) 100%); }
+      z-index: 20;
+      background: -moz-linear-gradient(left, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%);
+      background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%);
+      background: linear-gradient(to right, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%); }
     .gpu-hero .gpu-image img {
       position: absolute;
-      top: 50%;
-      right: 0;
-      transform: translateY(-50%);
-      width: 200%; }
+      top: -10%;
+      width: 100%; }
+      @media (max-width: 768px) {
+        .gpu-hero .gpu-image img {
+          width: 200%;
+          top: -50%; } }
 
 .gpu-section-title {
   width: 100%;
@@ -6037,7 +6046,8 @@ nav.navbar {
   .gpu-section-title h2 {
     font-family: 'Fjalla One', sans-serif;
     font-size: 3.2rem;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    margin: 2rem 0 0; }
 
 .gpu-section {
   margin-left: -15px;
@@ -6069,12 +6079,28 @@ nav.navbar {
     position: relative; }
     .chart .chart-bar .chart-bar-fill {
       position: absolute;
-      width: 80%;
+      width: 100%;
       height: 5rem;
       background: #95a5a6;
       z-index: 2; }
+      .chart .chart-bar .chart-bar-fill.top-card {
+        background: #f1c40f; }
+        .chart .chart-bar .chart-bar-fill.top-card:hover {
+          background: #f39c12; }
       .chart .chart-bar .chart-bar-fill:hover {
         background: #3498db; }
+      .chart .chart-bar .chart-bar-fill .chart-bar-gpu {
+        color: white;
+        font-weight: bold;
+        float: left;
+        margin: 1.25rem 2rem;
+        display: block; }
+      .chart .chart-bar .chart-bar-fill .chart-bar-value {
+        color: white;
+        font-weight: bold;
+        float: right;
+        margin: 1.25rem 2rem;
+        display: block; }
 
 .input-group {
   width: 100%; }
