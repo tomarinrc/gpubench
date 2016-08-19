@@ -118,7 +118,7 @@ nav.navbar {
 				font-size: 1.8rem;
 				font-weight: bold;
 				color: white;
-				background: $midnightblue;
+				background: $concrete;
 				padding: 2rem 4rem;
 				@include breakpoint($screen-xs-min) {
 					padding: 2rem;
@@ -137,12 +137,13 @@ nav.navbar {
 					color: $wetasphalt;
 					padding: 2.1rem 3rem;
 					text-decoration: none;
-					transition: all 80ms;
+					transition: background 200ms;
 					&.selected {
 						border-bottom: 4px solid $peterriver !important;
 					}
 					&:hover {
-						border-bottom: 4px solid $silver;
+						border-bottom: 4px solid white;
+						background: white;
 					}
 				}
 			}
