@@ -1,4 +1,23 @@
 @import "mixins";
+//Backgrounds
+
+/*#gpu-benchmarks {
+	background: url('assets/images/bench-bg.png');
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#gpu-gaming {
+	background: url('assets/images/gaming-bg.png');
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	background-position: center;
+}*/
+
 .gpu-section-title {
 	width: 100%;
 	background: $belizehole;
@@ -9,11 +28,9 @@
 		font-family: 'Fjalla One', sans-serif;
 		font-size: 3.2rem;
 		text-transform: uppercase;
-    margin: 2rem 0 0;
+		margin: 2rem 0 0;
 	}
-  p {
-
-  }
+	p {}
 }
 
 .gpu-section {
@@ -24,8 +41,11 @@
 	}
 }
 
-.gpu-section-icon {
-	font-size: .92em
+i.fa.gpu-section-icon {
+	font-size: 3.6rem !important;
+	#gpu-gaming h2 & {
+		font-size: 4rem !important;
+	}
 }
 
 .chart {
@@ -39,8 +59,7 @@
 		font-size: 2.2rem;
 		margin: 0;
 	}
-	.chart-subtitle {
-	}
+	.chart-subtitle {}
 	.chart-bar {
 		width: 100%;
 		height: 5rem;
@@ -52,7 +71,7 @@
 			font-weight: bold;
 			float: left;
 			margin: 1.25rem 2rem;
-			display:block;
+			display: block;
 			position: relative;
 			z-index: 3;
 		}
@@ -61,7 +80,7 @@
 			font-weight: bold;
 			float: right;
 			margin: 1.25rem 2rem;
-			display:block;
+			display: block;
 			position: relative;
 			z-index: 3;
 		}
@@ -71,48 +90,85 @@
 			height: 5rem;
 			background: $concrete;
 			z-index: 2;
-      &.top-card {
-        background: $peterriver;
-        &:hover {
-          background: $belizehole;
-        }
-      }
+			&.top-card {
+				background: $peterriver;
+				&:hover {
+					background: $belizehole;
+				}
+			}
 			&:hover {
 				background: $peterriver;
 			}
 		}
 	}
 }
-.review {
-	margin: 2rem 15px;
-	padding: 2rem 4rem 1.6rem;
-	color: white;
-	border-radius: 2px;
-	background: $asbestos;
-	/*&.review-vid {
-		background: $alizarin;
-	}
-	&.review-site {
+
+.review-col {
+	@include make-sm-column(4);
+	.review {
+		margin: 2rem 0;
+		padding: 12rem 2rem 1.6rem;
+		color: white;
+		border-radius: 2px;
 		background: $asbestos;
-	}*/
-	.review-title {
-		font-family: 'Fjalla One', sans-serif;
-		font-size: 2.2rem;
-		margin: 0;
-	}
-	.review-subtitle {
-		margin: 0;
+		/*&.review-vid {
+			background: $alizarin;
+		}
+		&.review-site {
+			background: $asbestos;
+		}*/
+		.review-title {
+			font-family: 'Fjalla One', sans-serif;
+			font-size: 2.2rem;
+			margin: 0;
+		}
+		.review-subtitle {
+			margin: 0;
+		}
 	}
 }
 
 .specs-list {
-	@include make-sm-column(6);
-	.specs-list-title {
+	@include make-sm-column(4);
+	h3.specs-list-title {
 		font-family: 'Fjalla One', sans-serif;
 		font-size: 2.2rem;
 		margin: 0;
 	}
-	.specs-list-subtitle {
-
+	table {
+		width: 100%;
+		thead {
+			width: 100%;
+			tr {
+				width: 100%;
+				th {
+					width: 100%;
+					padding: 2rem 0;
+					font-family: 'Fjalla One', sans-serif;
+					font-size: 2.2rem;
+				}
+			}
+		}
+		tbody {
+			width: 100%;
+			tr {
+				width: 100%;
+				//border: 1px solid $bordercolor;
+				//border-width: 1px 0;
+				&:nth-child(2n+1) {
+					//background: $clouds;
+				}
+				th {
+					width: 50%;
+					padding: .6rem 0;
+					font-weight: normal;
+				}
+				td {
+					width: 50%;
+					padding: .6rem 2rem;
+					font-weight: bold;
+				}
+			}
+		}
 	}
 }
