@@ -5809,11 +5809,11 @@ nav.navbar {
   nav.navbar.navbar-default {
     background: #ecf0f1;
     will-change: transform;
-    transition: all 240ms linear; }
-    nav.navbar.navbar-default.navbar--pinned {
+    transition: all 200ms linear; }
+    nav.navbar.navbar-default.navbar--top {
       opacity: 1;
       transform: translateY(0%); }
-    nav.navbar.navbar-default.navbar--unpinned {
+    nav.navbar.navbar-default.navbar--not-top {
       opacity: 0;
       transform: translateY(-100%); }
     nav.navbar.navbar-default .navbar-content {
@@ -6007,7 +6007,8 @@ nav.navbar {
       .gpu-hero .gpu-quickinfo .gpu-quickinfo-container h1.gpu-name {
         font-size: 4.8rem;
         color: #34495e;
-        font-weight: bold; }
+        font-weight: bold;
+        margin-left: -4px; }
         .gpu-hero .gpu-quickinfo .gpu-quickinfo-container h1.gpu-name .gpu-brand {
           font-weight: normal;
           letter-spacing: -2px; }
@@ -6154,7 +6155,8 @@ i.fa.gpu-section-icon {
       width: 40%;
       height: 5rem;
       background: #95a5a6;
-      z-index: 2; }
+      z-index: 2;
+      transition: background 300ms; }
       .chart .chart-bar .chart-bar-fill.top-card {
         background: #3498db; }
         .chart .chart-bar .chart-bar-fill.top-card:hover {
@@ -6171,40 +6173,69 @@ i.fa.gpu-section-icon {
     .review-col {
       float: left;
       width: 33.33333%; } }
+  .review-col .review-overlay {
+    content: ' ';
+    background: #7f8c8d;
+    position: relative;
+    z-index: 1; }
   .review-col .review {
     margin: 2rem 0;
-    padding: 12rem 2rem 1.6rem;
     color: white;
     border-radius: 2px;
     background: #7f8c8d;
+    transition: all 400ms;
     /*&.review-vid {
     	background: $alizarin;
     }
     &.review-site {
     	background: $asbestos;
     }*/ }
+    .review-col .review.youtube-link:hover {
+      background: #e74c3c; }
+    .review-col .review img {
+      width: 100%;
+      opacity: .12; }
+    .review-col .review .review-details {
+      position: absolute;
+      top: 60%;
+      left: 4rem; }
+      @media (max-width: 768px) {
+        .review-col .review .review-details {
+          top: 40%; } }
+      @media (max-width: 480px) {
+        .review-col .review .review-details {
+          top: 60%; } }
     .review-col .review .review-title {
       font-family: 'Fjalla One', sans-serif;
       font-size: 2.2rem;
-      margin: 0; }
+      margin: 0;
+      position: relative;
+      z-index: 2; }
     .review-col .review .review-subtitle {
-      margin: 0; }
+      margin: 0;
+      position: relative;
+      z-index: 2; }
 
 .specs-list {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
-  padding-right: 15px; }
+  padding-right: 15px;
+  height: 340px; }
   @media (min-width: 768px) {
     .specs-list {
       float: left;
-      width: 33.33333%; } }
+      width: 50%; } }
   .specs-list h3.specs-list-title {
     font-family: 'Fjalla One', sans-serif;
     font-size: 2.2rem;
-    margin: 0; }
+    margin: 2rem 0 1rem; }
   .specs-list table {
-    width: 100%; }
+    width: 100%;
+    border-right: 1px solid #ecf0f1;
+    transition: all 300ms; }
+    .specs-list table:hover {
+      border-right: 2px solid #3498db; }
     .specs-list table thead {
       width: 100%; }
       .specs-list table thead tr {

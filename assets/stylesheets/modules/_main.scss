@@ -90,6 +90,7 @@ i.fa.gpu-section-icon {
 			height: 5rem;
 			background: $concrete;
 			z-index: 2;
+			transition: background 300ms;
 			&.top-card {
 				background: $peterriver;
 				&:hover {
@@ -105,38 +106,73 @@ i.fa.gpu-section-icon {
 
 .review-col {
 	@include make-sm-column(4);
+	.review-overlay {
+		content: ' ';
+		background: $asbestos;
+		position: relative;
+		z-index: 1;
+	}
 	.review {
 		margin: 2rem 0;
-		padding: 12rem 2rem 1.6rem;
 		color: white;
 		border-radius: 2px;
 		background: $asbestos;
+		transition: all 400ms;
+		&.youtube-link:hover {
+			background: $alizarin;
+		}
+		img {
+			width: 100%;
+			opacity: .12;
+		}
 		/*&.review-vid {
 			background: $alizarin;
 		}
 		&.review-site {
 			background: $asbestos;
 		}*/
+		.review-details {
+			position: absolute;
+			top: 60%;
+			left: 4rem;
+			@include breakpoint($screen-sm-min) {
+				top: 40%;
+			}
+			@include breakpoint($screen-xs-min) {
+    		top: 60%;
+    	}
+
+		}
 		.review-title {
 			font-family: 'Fjalla One', sans-serif;
 			font-size: 2.2rem;
 			margin: 0;
+			position: relative;
+			z-index: 2;
 		}
 		.review-subtitle {
 			margin: 0;
+			position: relative;
+			z-index: 2;
 		}
 	}
 }
 
 .specs-list {
-	@include make-sm-column(4);
+	@include make-sm-column(6);
+	height: 340px;
 	h3.specs-list-title {
 		font-family: 'Fjalla One', sans-serif;
 		font-size: 2.2rem;
-		margin: 0;
+		margin: 2rem 0 1rem;
 	}
 	table {
 		width: 100%;
+		border-right: 1px solid $clouds;
+		transition: all 300ms;
+		&:hover {
+			border-right: 2px solid $peterriver;
+		}
 		thead {
 			width: 100%;
 			tr {
