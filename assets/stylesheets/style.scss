@@ -5,10 +5,13 @@
 @import "modules/header";
 @import "modules/hero";
 @import "modules/main";
+@import "modules/footer";
 //@import "modules/hero";
 //@import "modules/content";
 //Site Globals Overides
-body {}
+body {
+  position: relative;
+}
 
 .input-group {
     width: 100%;

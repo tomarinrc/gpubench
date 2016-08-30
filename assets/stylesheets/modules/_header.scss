@@ -1,6 +1,7 @@
 @import "mixins";
 nav.navbar {
 	padding: 0;
+	box-shadow: inset 0 -4px 0 0px $silver;
 	&.navbar-default {
 		background: $clouds;
 		will-change: transform;
@@ -21,7 +22,7 @@ nav.navbar {
 				padding: 2rem;
 				img {
 					height: 3rem;
-					@include breakpoint($screen-xs-min) {
+					@include breakpoint($screen-sm-min) {
 						width: auto;
 						margin: auto;
 						display: block;
@@ -31,7 +32,9 @@ nav.navbar {
 			.navbar-search {
 				@include make-xs-column(12);
 				@include make-sm-column(8);
-				padding: .8rem 2rem;
+				padding: 1rem 2rem;
+				background: $concrete;
+				border-bottom: 4px solid $asbestos;
 				.searchbox {
 					position: relative;
 					min-width: 5.2rem;
@@ -109,8 +112,12 @@ nav.navbar {
 				border: none;
 				background: $clouds;
 				float: left;
+				box-shadow: inset 0 -4px 0 0px $silver;
 				img {
 					height: 3rem;
+				}
+				@include breakpoint(628px) {
+					width: 25%;
 				}
 			}
 			.navbar-gpu-title {
@@ -120,30 +127,50 @@ nav.navbar {
 				color: white;
 				background: $concrete;
 				padding: 2rem 4rem;
-				@include breakpoint($screen-xs-min) {
+				transition: all 300ms;
+				box-shadow: inset 0 -4px 0 0px $asbestos;
+				&:hover {
+					background: $peterriver;
+					box-shadow: inset 0 -4px 0 0px $belizehole;
+				}
+				@include breakpoint(628px) {
 					padding: 2rem;
+					width: 75%;
 				}
 			}
-			.navbar-link-section {
-				@include breakpoint($screen-xs-min) {
+			ul.navbar-link-section.nav {
+				@include breakpoint(628px) {
 					display: none;
 				}
 				float: left;
-				a {
+				padding-left: 0;
+				margin-bottom: 0;
+				li {
 					display: block;
 					float: left;
-					font-size: 1.4rem;
-					font-weight: bold;
-					color: $wetasphalt;
-					padding: 2.1rem 3rem;
-					text-decoration: none;
-					transition: background 200ms;
-					&.selected {
+					&.active a {
 						border-bottom: 4px solid $peterriver !important;
-					}
-					&:hover {
-						border-bottom: 4px solid white;
+						transition: all 100ms;
 						background: white;
+					}
+					a {
+						display: block;
+						float: left;
+						font-size: 1.4rem;
+						font-weight: bold;
+						color: $wetasphalt;
+						padding: 2.1rem 3rem;
+						text-decoration: none;
+						transition: background 200ms;
+						&:hover {
+							background: white;
+						}
+						.navbar-links-text {
+							@include breakpoint(994px) {
+								display: none;
+							}
+							;
+						}
 					}
 				}
 			}

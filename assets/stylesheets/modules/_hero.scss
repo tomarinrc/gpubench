@@ -1,4 +1,8 @@
 @import "mixins";
+.gpu-hero-venderBG {
+  width: 100%;
+  //background: $emerald;
+}
 .gpu-hero-container {
   @include breakpoint($screen-sm-min) {
 		padding: 0;
@@ -53,6 +57,7 @@
         display: inline-block;
         margin: 2rem 2rem 0 0;
         text-decoration: none;
+        transition: all 300ms;
         &.specs {
           color: $belizehole;
           background: none;
@@ -61,6 +66,9 @@
         &.compare {
           color: white;
           background: $belizehole;
+          &:hover {
+            background: $peterriver;
+          }
         }
       }
       @include breakpoint($screen-sm-min) {

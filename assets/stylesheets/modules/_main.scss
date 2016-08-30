@@ -41,11 +41,8 @@
 	}
 }
 
-i.fa.gpu-section-icon {
-	font-size: 3.6rem !important;
-	#gpu-gaming h2 & {
-		font-size: 4rem !important;
-	}
+#gpu-gaming h2 i.fa.gpu-section-icon {
+	font-size: 4rem !important;
 }
 
 .chart {
@@ -118,6 +115,22 @@ i.fa.gpu-section-icon {
 		border-radius: 2px;
 		background: $asbestos;
 		transition: all 400ms;
+		i.fa.fa-youtube-play {
+			position: absolute;
+			top: 36%;
+			left: 42%;
+			font-size: 6rem;
+			opacity: .4;
+			@include breakpoint(480px) {
+				top: 40%;
+			}
+			@include breakpoint($screen-sm-min) {
+				top: 40%;
+			}
+			@include breakpoint($screen-xs-min) {
+				top: 30%;
+			}
+		}
 		&.youtube-link:hover {
 			background: $alizarin;
 		}
@@ -135,13 +148,15 @@ i.fa.gpu-section-icon {
 			position: absolute;
 			top: 60%;
 			left: 4rem;
-			@include breakpoint($screen-sm-min) {
+			@include breakpoint(480px) {
 				top: 40%;
+			}
+			@include breakpoint($screen-sm-min) {
+				top: 70%;
 			}
 			@include breakpoint($screen-xs-min) {
     		top: 60%;
     	}
-
 		}
 		.review-title {
 			font-family: 'Fjalla One', sans-serif;

@@ -17,21 +17,46 @@
   <![endif]-->
 	</head>
 
-	<body>
+	<body data-spy="scroll" data-target="#ssid" data-offset="70">
 		<header>
 			<nav class="navbar navbar-secondary navbar-fixed-top">
 				<div class="container">
 					<div class="navbar-links">
-						<button class="navbar-logo-mini" data-toggle="collapse" data-target="#navbar-links-section" aria-expanded="false">
+						<a href="#" class="navbar-logo-mini" data-toggle="collapse" data-target="#navbar-links-section" aria-expanded="false">
 							<img src="assets/images/logo-mini.svg" />
-						</button>
-						<div class="navbar-gpu-title">
-							GeForce GTX 970
-						</div>
-						<div class="navbar-link-section" id="navbar-links-section">
-							<a href="#gpu-benchmarks">Benchmarks</a>
-							<a href="#gpu-gaming">Gaming</a>
-							<a href="#gpu-reviews">Reviews</a>
+						</a>
+						<a href="#gpu-hero">
+							<div class="navbar-gpu-title">
+								GeForce GTX 970
+							</div>
+						</a>
+						<div id="ssid">
+							<ul class="navbar-link-section nav" id="navbar-links-section">
+								<li>
+									<a href="#gpu-benchmarks">
+										<i class="fa fa-bar-chart" aria-hidden="true"></i>
+										<span class="navbar-links-text">&nbsp;&nbsp;Benchmarks</span>
+									</a>
+								</li>
+								<li>
+									<a href="#gpu-gaming">
+										<i class="fa fa-gamepad gpu-section-icon" aria-hidden="true"></i>
+										<span class="navbar-links-text">&nbsp;&nbsp;Gaming</span>
+									</a>
+								</li>
+								<li>
+									<a href="#gpu-reviews">
+										<i class="fa fa-th" aria-hidden="true"></i>
+										<span class="navbar-links-text">&nbsp;&nbsp;Reviews</span>
+									</a>
+								</li>
+								<li>
+									<a href="#gpu-specs">
+										<i class="fa fa-list" aria-hidden="true"></i>
+										<span class="navbar-links-text">&nbsp;&nbsp;Specification</span>
+									</a>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -57,29 +82,31 @@
 		</header>
 
 		<main>
-			<div class="container gpu-hero-container">
-				<section class="gpu-hero">
-					<div class="gpu-quickinfo">
-						<div class="gpu-quickinfo-container">
-							<h1 class="gpu-name">
-								<span class="gpu-brand">NVIDIA</span>
-								<br />GeForce GTX 970</h1>
-							<p class="gpu-quickinfo-specs">4GB GDDR5 | 1 Ghz</p>
-							<p class="gpu-quickinfo-date">Released Jan 10, 1996 |
-								<a href="#" class="gpu-quickinfo-tier">Gen 24</a> |
-								<a href="#" class="gpu-quickinfo-tier">Toppest Tier</a>
-							</p>
-							<a class="gpu-quickinfo-button specs" href="#">View Specifications</a>
-							<a class="gpu-quickinfo-button compare" href="#">Compare</a>
+			<div class="gpu-hero-venderBG">
+				<div class="container gpu-hero-container">
+					<section class="gpu-hero" id="gpu-hero">
+						<div class="gpu-quickinfo">
+							<div class="gpu-quickinfo-container">
+								<h1 class="gpu-name">
+									<span class="gpu-brand">NVIDIA</span>
+									<br />GeForce GTX 970</h1>
+								<p class="gpu-quickinfo-specs">4GB GDDR5 | 1 Ghz</p>
+								<p class="gpu-quickinfo-date">Released Jan 10, 1996 |
+									<a href="#" class="gpu-quickinfo-tier">Gen 24</a> |
+									<a href="#" class="gpu-quickinfo-tier">Toppest Tier</a>
+								</p>
+								<a class="gpu-quickinfo-button specs" href="#">View Specifications</a>
+								<a class="gpu-quickinfo-button compare" href="#">Compare</a>
+							</div>
 						</div>
-					</div>
-					<div class="gpu-image">
-						<div class="gpu-image-overlay">
+						<div class="gpu-image">
+							<div class="gpu-image-overlay">
 
+							</div>
+							<img src="assets/images/gtx980.png" />
 						</div>
-						<img src="assets/images/gtx980.png" />
-					</div>
-				</section>
+					</section>
+				</div>
 			</div>
 
 			<section id="gpu-benchmarks">
@@ -346,6 +373,7 @@
 					<div class="gpu-section">
 						<div class="review-col">
 							<div class="review youtube-link">
+								<i class="fa fa-youtube-play" aria-hidden="true"></i>
 								<img src="http://img.youtube.com/vi/Eqz4tDM6Wl8/mqdefault.jpg" />
 								<div class="review-details">
 									<h3 class="review-title">League of Legends</h3>
@@ -355,6 +383,7 @@
 						</div>
 						<div class="review-col">
 							<div class="review youtube-link">
+								<i class="fa fa-youtube-play" aria-hidden="true"></i>
 								<img src="http://img.youtube.com/vi/Eqz4tDM6Wl8/mqdefault.jpg" />
 								<div class="review-details">
 									<h3 class="review-title">League of Legends</h3>
@@ -364,6 +393,7 @@
 						</div>
 						<div class="review-col">
 							<div class="review youtube-link">
+								<i class="fa fa-youtube-play" aria-hidden="true"></i>
 								<img src="http://img.youtube.com/vi/Eqz4tDM6Wl8/mqdefault.jpg" />
 								<div class="review-details">
 									<h3 class="review-title">League of Legends</h3>
@@ -490,8 +520,15 @@
 		</main>
 
 		<footer>
-			<div>
-
+			<div class="container">
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
 			</div>
 		</footer>
 
@@ -500,6 +537,7 @@
 		<script src="assets/javascripts/headroom.js"></script>
 		<script src="assets/javascripts/headroom-jquery.js"></script>
 		<script src="assets/javascripts/scripts.js"></script>
+		<script src="assets/javascripts/smooth.js"></script>
 		<script src="https://use.fontawesome.com/da011ec259.js"></script>
 	</body>
 
