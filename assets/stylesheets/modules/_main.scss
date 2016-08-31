@@ -35,10 +35,7 @@
 
 .gpu-section {
 	@include make-row();
-	margin: 2rem -15px 6rem;
-	@include breakpoint($screen-xs-min) {
-		margin: 2rem -15px 4rem;
-	}
+	margin: 2rem -15px 4rem;
 }
 
 #gpu-gaming h2 i.fa.gpu-section-icon {

@@ -1,7 +1,8 @@
 @import "mixins";
 nav.navbar {
 	padding: 0;
-	box-shadow: inset 0 -4px 0 0px $silver;
+	border: 0;
+	box-shadow: inset 0 -4px 0 0px $silver, 0px 1px 2px 0px rgba(0,0,0,0.34);
 	&.navbar-default {
 		background: $clouds;
 		will-change: transform;
@@ -104,7 +105,8 @@ nav.navbar {
 		background: $clouds;
 		//border: 1px solid $bordercolor;
 		//border-width: 0 0 1px;
-		border: none;
+		border: 0;
+		box-shadow: inset 0 -4px 0 0px $silver, 0px 1px 2px 0px rgba(0,0,0,0.34);
 		.navbar-links {
 			@include make-row();
 			.navbar-logo-mini {

@@ -5806,7 +5806,8 @@ button.close {
     display: none !important; } }
 nav.navbar {
   padding: 0;
-  box-shadow: inset 0 -4px 0 0px #bdc3c7; }
+  border: 0;
+  box-shadow: inset 0 -4px 0 0px #bdc3c7, 0px 1px 2px 0px rgba(0, 0, 0, 0.34); }
   nav.navbar.navbar-default {
     background: #ecf0f1;
     will-change: transform;
@@ -5922,7 +5923,8 @@ nav.navbar {
           width: 100%; }
   nav.navbar.navbar-secondary {
     background: #ecf0f1;
-    border: none; }
+    border: 0;
+    box-shadow: inset 0 -4px 0 0px #bdc3c7, 0px 1px 2px 0px rgba(0, 0, 0, 0.34); }
     nav.navbar.navbar-secondary .navbar-links {
       margin-left: -15px;
       margin-right: -15px; }
@@ -6124,15 +6126,12 @@ nav.navbar {
 .gpu-section {
   margin-left: -15px;
   margin-right: -15px;
-  margin: 2rem -15px 6rem; }
+  margin: 2rem -15px 4rem; }
   .gpu-section:before, .gpu-section:after {
     content: " ";
     display: table; }
   .gpu-section:after {
     clear: both; }
-  @media (max-width: 480px) {
-    .gpu-section {
-      margin: 2rem -15px 4rem; } }
 
 #gpu-gaming h2 i.fa.gpu-section-icon {
   font-size: 4rem !important; }
@@ -6304,7 +6303,46 @@ nav.navbar {
 
 footer {
   width: 100%;
-  background: #2c3e50; }
+  background: #34495e;
+  border-top: 8px solid #2c3e50;
+  box-shadow: 0px -1px 2px 0px rgba(0, 0, 0, 0.34); }
+  footer h4 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    margin: 0 0 2rem;
+    color: white; }
+  footer .footer-links {
+    margin: 4rem 0;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px; }
+    @media (min-width: 768px) {
+      footer .footer-links {
+        float: left;
+        width: 25%; } }
+    footer .footer-links ul {
+      padding-left: 0; }
+      footer .footer-links ul li {
+        list-style-type: none; }
+        footer .footer-links ul li a {
+          padding: .4rem 0;
+          display: block;
+          color: white;
+          text-transform: uppercase; }
+  footer .footer-info {
+    margin: 4rem 0;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px; }
+    @media (min-width: 768px) {
+      footer .footer-info {
+        float: left;
+        width: 75%; } }
+    footer .footer-info p {
+      color: white; }
 
 body {
   position: relative; }
