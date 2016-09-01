@@ -17,7 +17,7 @@
   <![endif]-->
 	</head>
 
-	<body data-spy="scroll" data-target="#ssid" data-offset="70">
+	<body data-spy="scroll" data-target=".navbar-secondary" data-offset="70" id="datbod">
 		<header>
 			<nav class="navbar navbar-secondary navbar-fixed-top">
 				<div class="container">
@@ -25,39 +25,40 @@
 						<a href="#" class="navbar-logo-mini" data-toggle="collapse" data-target="#navbar-links-section" aria-expanded="false">
 							<img src="assets/images/logo-mini.svg" />
 						</a>
-						<a href="#gpu-hero">
+						<a href="#datbod">
 							<div class="navbar-gpu-title">
 								GeForce GTX 970
 							</div>
 						</a>
-						<div id="ssid">
-							<ul class="navbar-link-section nav" id="navbar-links-section">
-								<li>
-									<a href="#gpu-benchmarks">
-										<i class="fa fa-bar-chart" aria-hidden="true"></i>
-										<span class="navbar-links-text">&nbsp;&nbsp;Benchmarks</span>
-									</a>
-								</li>
-								<li>
-									<a href="#gpu-gaming">
-										<i class="fa fa-gamepad gpu-section-icon" aria-hidden="true"></i>
-										<span class="navbar-links-text">&nbsp;&nbsp;Gaming</span>
-									</a>
-								</li>
-								<li>
-									<a href="#gpu-reviews">
-										<i class="fa fa-th" aria-hidden="true"></i>
-										<span class="navbar-links-text">&nbsp;&nbsp;Reviews</span>
-									</a>
-								</li>
-								<li>
-									<a href="#gpu-specs">
-										<i class="fa fa-list" aria-hidden="true"></i>
-										<span class="navbar-links-text">&nbsp;&nbsp;Specification</span>
-									</a>
-								</li>
-							</ul>
-						</div>
+						<ul class="navbar-link-section nav" id="navbar-links-section">
+							<li>
+								<a href="#gpu-benchmarks">
+									<i class="fa fa-bar-chart" aria-hidden="true"></i>
+									<span class="navbar-links-text">&nbsp;&nbsp;Benchmarks</span>
+								</a>
+							</li>
+							<li>
+								<a href="#gpu-gaming">
+									<i class="fa fa-gamepad gpu-section-icon" aria-hidden="true"></i>
+									<span class="navbar-links-text">&nbsp;&nbsp;Gaming</span>
+								</a>
+							</li>
+							<li>
+								<a href="#gpu-reviews">
+									<i class="fa fa-th" aria-hidden="true"></i>
+									<span class="navbar-links-text">&nbsp;&nbsp;Reviews</span>
+								</a>
+							</li>
+							<li>
+								<a href="#gpu-specs">
+									<i class="fa fa-list" aria-hidden="true"></i>
+									<span class="navbar-links-text">&nbsp;&nbsp;Specification</span>
+								</a>
+							</li>
+						</ul>
+						<a href="#datbod" class="search-icon">
+							<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+						</a>
 					</div>
 				</div>
 			</nav>
@@ -69,7 +70,7 @@
 						</figure>
 						<div class="navbar-search">
 							<form class="searchbox searchbox-open">
-								<input type="search" placeholder="Search Graphics Cards" name="search" class="searchbox-input" onkeyup="buttonUp();" required>
+								<input id="search" type="search" placeholder="Search Graphics Cards" name="search" class="searchbox-input" onkeyup="buttonUp();" required>
 								<input type="submit" class="searchbox-submit" value="GO">
 								<span class="searchbox-icon">
 									<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
@@ -542,7 +543,7 @@
 					<section class="footer-info">
 						<h4>Site Info</h4>
 						<p>
-							GPUBench&reg; is the best looking video card benchmarking site on the net (it is, we've checked). It was made by one man with way too much time on his hands, and waaaaaaaaay too many computer parts. 
+							GPUBench&reg; is the best looking video card benchmarking site on the net (it is, we've checked). It was made by one man with way too much time on his hands, and waaaaaaaaay too many computer parts.
 						</p>
 					</section>
 				</div>

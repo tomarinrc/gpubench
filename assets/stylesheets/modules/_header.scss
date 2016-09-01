@@ -2,7 +2,7 @@
 nav.navbar {
 	padding: 0;
 	border: 0;
-	box-shadow: inset 0 -4px 0 0px $silver, 0px 1px 2px 0px rgba(0,0,0,0.34);
+	box-shadow: inset 0 -4px 0 0px $silver, 0px 1px 2px 0px rgba(0, 0, 0, 0.34);
 	&.navbar-default {
 		background: $clouds;
 		will-change: transform;
@@ -106,7 +106,7 @@ nav.navbar {
 		//border: 1px solid $bordercolor;
 		//border-width: 0 0 1px;
 		border: 0;
-		box-shadow: inset 0 -4px 0 0px $silver, 0px 1px 2px 0px rgba(0,0,0,0.34);
+		box-shadow: inset 0 -4px 0 0px $silver, 0px 1px 2px 0px rgba(0, 0, 0, 0.34);
 		.navbar-links {
 			@include make-row();
 			.navbar-logo-mini {
@@ -118,8 +118,8 @@ nav.navbar {
 				img {
 					height: 3rem;
 				}
-				@include breakpoint(628px) {
-					width: 25%;
+				@include breakpoint(768px) {
+					width: 20%;
 				}
 			}
 			.navbar-gpu-title {
@@ -128,20 +128,20 @@ nav.navbar {
 				font-weight: bold;
 				color: white;
 				background: $concrete;
-				padding: 2rem 4rem;
+				padding: 1.8rem 4rem 2.2rem;
 				transition: all 300ms;
 				box-shadow: inset 0 -4px 0 0px $asbestos;
 				&:hover {
 					background: $peterriver;
 					box-shadow: inset 0 -4px 0 0px $belizehole;
 				}
-				@include breakpoint(628px) {
+				@include breakpoint(767px) {
 					padding: 2rem;
-					width: 75%;
+					width: 60%;
 				}
 			}
 			ul.navbar-link-section.nav {
-				@include breakpoint(628px) {
+				@include breakpoint(768px) {
 					display: none;
 				}
 				float: left;
@@ -168,12 +168,37 @@ nav.navbar {
 							background: white;
 						}
 						.navbar-links-text {
-							@include breakpoint(994px) {
+							@media (min-width: 768px) {
 								display: none;
 							}
-							;
+							@media (min-width: 992px) {
+								display: none;
+							}
+							@media (min-width: 1200px) {
+								display: inline;
+							}
 						}
 					}
+				}
+			}
+			.search-icon {
+				display: block;
+				float: right;
+				font-size: 1.4rem;
+				font-weight: bold;
+				padding: 2.1rem 3rem;
+				color: white;
+				background: $concrete;
+				transition: all 300ms;
+				border-bottom: 4px solid $asbestos;
+				&:hover {
+					background: $peterriver;
+					border-bottom: 4px solid $belizehole;
+				}
+				@include breakpoint(768px) {
+					width: 20%;
+					background: $peterriver;
+					border-bottom: 4px solid $belizehole;
 				}
 			}
 		}
